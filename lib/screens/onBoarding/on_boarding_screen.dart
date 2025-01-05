@@ -36,8 +36,8 @@ class OnboardingScreen extends StatelessWidget {
             // "packages/wasly_template/assets/images/store/onBoarding/Heading.png",
             titleHighlightColor: AppColors.primaryBase,
             titleOriginalColor: AppColors.textPrimaryBase,
-            titleStyle: CustomTextStyles.headingH3,
-            bodyStyle: CustomTextStyles.paragraph3.copyWith(
+            titleStyle: CustomResponsiveTextStyles.headingH3,
+            bodyStyle: CustomResponsiveTextStyles.paragraph3.copyWith(
               color: AppColors.textSecondaryBase,
             ),
             pageDecoration: pageDecoration),
@@ -50,8 +50,8 @@ class OnboardingScreen extends StatelessWidget {
             // "packages/wasly_template/assets/images/store/onBoarding/Heading-1.png",
             titleHighlightColor: AppColors.primaryBase,
             titleOriginalColor: AppColors.textPrimaryBase,
-            titleStyle: CustomTextStyles.headingH3,
-            bodyStyle: CustomTextStyles.paragraph3.copyWith(
+            titleStyle: CustomResponsiveTextStyles.headingH3,
+            bodyStyle: CustomResponsiveTextStyles.paragraph3.copyWith(
               color: AppColors.textSecondaryBase,
             ),
             pageDecoration: pageDecoration),
@@ -64,8 +64,8 @@ class OnboardingScreen extends StatelessWidget {
           // "packages/wasly_template/assets/images/store/onBoarding/Heading-2.png",
           titleHighlightColor: AppColors.primaryBase,
           titleOriginalColor: AppColors.textPrimaryBase,
-          titleStyle: CustomTextStyles.headingH3,
-          bodyStyle: CustomTextStyles.paragraph3.copyWith(
+          titleStyle: CustomResponsiveTextStyles.headingH3,
+          bodyStyle: CustomResponsiveTextStyles.paragraph3.copyWith(
             color: AppColors.textSecondaryBase,
           ),
           pageDecoration: pageDecoration,

@@ -1,8 +1,17 @@
+import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'package:wasly_store/screens/auth/create_new_password_screen.dart';
+import 'package:wasly_store/screens/auth/forgot_password_screen.dart';
+import 'package:wasly_store/screens/auth/login_screen.dart';
+import 'package:wasly_store/screens/auth/password_created_successefully_screen.dart';
+import 'package:wasly_store/screens/auth/signup_screen.dart';
+import 'package:wasly_store/screens/auth/starting_location_screen.dart';
+import 'package:wasly_store/screens/auth/starting_screen.dart';
+import 'package:wasly_store/screens/auth/verification_screen.dart';
+import 'package:wasly_store/screens/location_picker_screen.dart';
 import 'package:wasly_store/screens/onBoarding/on_boarding_screen.dart';
 import 'package:wasly_store/screens/splash_screen.dart';
-import 'package:wasly_template/core/styles/custom_color_styles.dart';
 import 'package:wasly_template/wasly_template.dart';
 
 void main() {
@@ -14,23 +23,45 @@ class MyApp extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return GetMaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: 'Flutter Demo',
-      theme: CustomTheme.theme,
-      home: SplashScreen(
-        nextScreen: OnboardingScreen(
-          onFinish: () async {
-            await Get.to(HomePage());
-          },
+    return DevicePreview(
+      builder: (context) => GetMaterialApp(
+        home: SplashScreen(
+          nextScreen: OnboardingScreen(
+            onFinish: () async {
+              await Get.to(LoginScreen());
+            },
+          ),
+          backgroundColor: AppColors.primaryBase,
         ),
-        backgroundColor: AppColors.primaryBase,
+        // LocationPickerScreen(),
+        builder: (BuildContext ctx, Widget? widget) {
+          // ...
+
+          return DevicePreview.appBuilder(ctx, widget);
+          // ...
+        },
+
+        // ...
       ),
-      getPages: [
-        // GetPage(name: '/', page: () => OnboardingScreen(onFinish: ,)),
-        // GetPage(name: '/home', page: () => HomePage()),
-      ],
     );
+    // return GetMaterialApp(
+    //   debugShowCheckedModeBanner: false,
+    //   title: 'Flutter Demo',
+    //   theme: CustomTheme.theme,
+    //   home: LoginScreen(),
+    //  SplashScreen(
+    //   nextScreen: OnboardingScreen(
+    //     onFinish: () async {
+    //       await Get.to(HomePage());
+    //     },
+    //   ),
+    //   backgroundColor: AppColors.primaryBase,
+    // ),
+    //   getPages: [
+    //     // GetPage(name: '/', page: () => OnboardingScreen(onFinish: ,)),
+    //     // GetPage(name: '/home', page: () => HomePage()),
+    //   ],
+    // );
   }
 }
 
@@ -42,7 +73,7 @@ class HomePage extends StatelessWidget {
       MaterialPageRoute(
           builder: (_) => OnboardingScreen(
                 onFinish: () async {
-                  await Get.to(() => HomePage());
+                  await Get.to(() => StartingScreen());
                 },
               )),
     );
