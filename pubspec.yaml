@@ -50,6 +50,7 @@ dependencies:
   google_maps_flutter: ^2.10.0
   flutter_polyline_points: ^2.1.0
   geolocator: ^13.0.2
+  flutter_pannable_rating_bar: ^2.7.2+1
 dev_dependencies:
   flutter_test:
     sdk: flutter
@@ -75,7 +76,9 @@ flutter:
   # To add assets to your application, add an assets section, like this:
   assets:
     - assets/animation/lottie/test.json
+    - assets/images/
     - assets/icons/
+
     - ../wasly_template/assets/
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/to/resolution-aware-images

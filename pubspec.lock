@@ -227,6 +227,14 @@ packages:
       url: "https://pub.dev"
     source: hosted
     version: "1.4.0+2"
+  flutter_pannable_rating_bar:
+    dependency: "direct main"
+    description:
+      name: flutter_pannable_rating_bar
+      sha256: a6ba1f474ccb23e1b0b7d0a0ec28bb31c088bad808fd207b536b3cb46cbcaf7a
+      url: "https://pub.dev"
+    source: hosted
+    version: "2.7.2+1"
   flutter_plugin_android_lifecycle:
     dependency: transitive
     description:
@@ -401,10 +409,10 @@ packages:
     dependency: transitive
     description:
       name: http_parser
-      sha256: "76d306a1c3afb33fe82e2bbacad62a61f409b5634c915fceb0d799de1a913360"
+      sha256: "178d74305e7866013777bab2c3d8726205dc5a4dd935297175b19a23a2e66571"
       url: "https://pub.dev"
     source: hosted
-    version: "4.1.1"
+    version: "4.1.2"
   intl:
     dependency: transitive
     description:
@@ -609,10 +617,10 @@ packages:
     dependency: transitive
     description:
       name: shared_preferences
-      sha256: "3c7e73920c694a436afaf65ab60ce3453d91f84208d761fbd83fc21182134d93"
+      sha256: a752ce92ea7540fc35a0d19722816e04d0e72828a4200e83a98cf1a1eb524c9a
       url: "https://pub.dev"
     source: hosted
-    version: "2.3.4"
+    version: "2.3.5"
   shared_preferences_android:
     dependency: transitive
     description:
