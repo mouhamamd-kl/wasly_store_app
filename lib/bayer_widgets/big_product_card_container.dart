@@ -13,6 +13,7 @@ class BigProductCardContainer extends StatelessWidget {
   double rate;
   int numberOfRating;
   BigProductCardContainer({
+    super.key,
     required this.imagePath,
     required this.productName,
     required this.tags,
@@ -22,39 +23,39 @@ class BigProductCardContainer extends StatelessWidget {
   });
   @override
   Widget build(BuildContext context) {
-    return SizedBox(
-      width: 334,
-      height: 215,
+    return AspectRatio(
+      aspectRatio: 334 / 215,
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.start,
         mainAxisAlignment: MainAxisAlignment.spaceBetween,
         children: [
           //Add the image and the rate
-          SizedBox(
-            width: 334,
-            height: 137,
-            child: Stack(
-              children: [
-                Container(
-                  width: double.infinity,
-                  height: double.infinity,
-                  decoration: BoxDecoration(
-                    image: DecorationImage(
-                      fit: BoxFit.cover,
-                      image: AssetImage(imagePath),
+          AspectRatio(
+            aspectRatio: 334 / 137,
+            child: SizedBox(
+              width: double.infinity,
+              child: Stack(
+                children: [
+                  Container(
+                    width: double.infinity,
+                    height: double.infinity,
+                    decoration: BoxDecoration(
+                      image: DecorationImage(
+                        fit: BoxFit.cover,
+                        image: AssetImage(imagePath),
+                      ),
+                      borderRadius: BorderRadius.circular(10),
                     ),
-                    borderRadius: BorderRadius.circular(10),
                   ),
-                ),
-                Container(
-                  margin: EdgeInsets.symmetric(horizontal: 6, vertical: 8),
-                  alignment: Alignment.topLeft,
-                  child: RatingcontainerLight(
-                    rate: rate,
-                    numberOfRating: numberOfRating,
+                  Align(
+                    alignment: Alignment(-0.9, -0.8),
+                    child: RatingcontainerLight(
+                      rate: rate,
+                      numberOfRating: numberOfRating,
+                    ),
                   ),
-                ),
-              ],
+                ],
+              ),
             ),
           ),
           //Add the name of the product

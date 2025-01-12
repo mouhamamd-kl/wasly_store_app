@@ -1,38 +1,39 @@
 import 'package:flutter/material.dart';
-import 'package:wasly_store/bayer_widgets/full_rating_container.dart';
-import 'package:wasly_store/bayer_widgets/store_profile_container.dart';
+import 'package:wasly_store/bayer_widgets/customer_review_container.dart';
 import 'package:wasly_template/wasly_template.dart';
 
 class ReviewScreen extends StatelessWidget {
+  const ReviewScreen({
+    super.key,
+  });
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      body: Padding(
-        padding: const EdgeInsets.only(bottom: 16),
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.spaceBetween,
-          children: [
-            StoreProfileContainer(
-              wallpaperImagePath: 'assets/images/wallpaper.png',
-              profileImagePath: 'assets/images/image.png',
-              rate: 4.5,
-              numberOfRating: 100,
-              storeName: 'Pizza Hut',
-              location: 'Damascus - Barzeh',
-            ),
-            FullRatingContainer(),
-            Container(
-              height: 126,
-              width: 335,
-              color: Colors.black,
-            ),
-            SizedBox(
-              width: 335,
-              height: 54,
-              child: CustomTextButtonActive(text: "Submit", onClick: () {}),
-            ),
-          ],
+      appBar: AppBar(
+        centerTitle: true,
+        title: Text(
+          'All Reviews',
+          style: CustomResponsiveTextStyles.headingH9.copyWith(
+            color: AppColors.textPrimaryBase,
+          ),
         ),
+      ),
+      body: ListView.builder(
+        itemCount: 5,
+        itemBuilder: (context, index) {
+          return Container(
+            width: double.infinity,
+            margin: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+            child: CustomerReviewContainer(
+              userImagePath: 'assets/images/image.png',
+              username: 'Mohammad Bayer Al-Ali',
+              review: 'this product is son of bitch',
+              reviewDate: '11/1/2025',
+              rate: 4,
+            ),
+          );
+        },
       ),
     );
   }
