@@ -1,21 +1,15 @@
 import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:wasly_store/screens/auth/create_new_password_screen.dart';
-import 'package:wasly_store/screens/auth/forgot_password_screen.dart';
-import 'package:wasly_store/screens/auth/login_screen.dart';
-import 'package:wasly_store/screens/auth/password_created_successefully_screen.dart';
-import 'package:wasly_store/screens/auth/signup_screen.dart';
-import 'package:wasly_store/screens/auth/starting_location_screen.dart';
-import 'package:wasly_store/screens/auth/starting_screen.dart';
-import 'package:wasly_store/screens/auth/verification_screen.dart';
+import 'package:wasly_store/owis_screens/owis_main.dart';
+
 import 'package:wasly_store/screens/location_picker_screen.dart';
 import 'package:wasly_store/screens/onBoarding/on_boarding_screen.dart';
 import 'package:wasly_store/screens/splash_screen.dart';
 import 'package:wasly_template/wasly_template.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(OwisMain());
 }
 
 class MyApp extends StatelessWidget {
@@ -28,7 +22,7 @@ class MyApp extends StatelessWidget {
         home: SplashScreen(
           nextScreen: OnboardingScreen(
             onFinish: () async {
-              await Get.to(LoginScreen());
+              //await Get.to(LoginScreen());
             },
           ),
           backgroundColor: AppColors.primaryBase,
@@ -73,7 +67,7 @@ class HomePage extends StatelessWidget {
       MaterialPageRoute(
           builder: (_) => OnboardingScreen(
                 onFinish: () async {
-                  await Get.to(() => StartingScreen());
+                  //await Get.to(() => StartingScreen());
                 },
               )),
     );
