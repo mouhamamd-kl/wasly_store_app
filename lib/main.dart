@@ -1,18 +1,10 @@
 import 'package:device_preview/device_preview.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:wasly_store/screens/auth/create_new_password_screen.dart';
-import 'package:wasly_store/screens/auth/forgot_password_screen.dart';
-import 'package:wasly_store/screens/auth/login_screen.dart';
-import 'package:wasly_store/screens/auth/password_created_successefully_screen.dart';
-import 'package:wasly_store/screens/auth/signup_screen.dart';
-import 'package:wasly_store/screens/auth/starting_location_screen.dart';
+import 'package:wasly_store/bindings/binding.dart';
 import 'package:wasly_store/screens/auth/starting_screen.dart';
-import 'package:wasly_store/screens/auth/verification_screen.dart';
-import 'package:wasly_store/screens/location_picker_screen.dart';
+import 'package:wasly_store/screens/home_store_screen.dart';
 import 'package:wasly_store/screens/onBoarding/on_boarding_screen.dart';
-import 'package:wasly_store/screens/splash_screen.dart';
-import 'package:wasly_template/wasly_template.dart';
 
 void main() {
   runApp(const MyApp());
@@ -25,15 +17,17 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return DevicePreview(
       builder: (context) => GetMaterialApp(
-        home: SplashScreen(
-          nextScreen: OnboardingScreen(
-            onFinish: () async {
-              await Get.to(LoginScreen());
-            },
-          ),
-          backgroundColor: AppColors.primaryBase,
-        ),
-        // LocationPickerScreen(),
+        initialBinding: CustomerBinding(),
+        home:
+            // SplashScreen(
+            //   nextScreen: OnboardingScreen(
+            //     onFinish: () async {
+            //       await Get.to(LoginScreen());
+            //     },
+            //   ),
+            //   backgroundColor: AppColors.primaryBase,
+            // ),
+            HomeStoreScreen(),
         builder: (BuildContext ctx, Widget? widget) {
           // ...
 

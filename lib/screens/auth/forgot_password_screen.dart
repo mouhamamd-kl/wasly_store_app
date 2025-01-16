@@ -1,9 +1,9 @@
 import 'dart:async';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:wasly_store/screens/auth/create_new_password_screen.dart';
-import 'package:wasly_store/screens/auth/password_created_successefully_screen.dart';
-import 'package:wasly_store/screens/auth/signup_screen.dart';
+import 'package:wasly/screens/auth/create_new_password_screen.dart';
+import 'package:wasly/screens/auth/password_created_successefully_screen.dart';
+import 'package:wasly/screens/auth/signup_screen.dart';
 import 'package:wasly_template/core/widgets/field/custom_text_field.dart';
 import 'package:wasly_template/wasly_template.dart';
 

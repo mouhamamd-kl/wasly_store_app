@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:wasly_store/screens/location_picker_screen.dart';
+import 'package:wasly/screens/location/location_picker_screen.dart';
 import 'package:wasly_template/core/widgets/text/text_button_1.dart';
 import 'package:wasly_template/wasly_template.dart';
 

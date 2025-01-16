@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_otp_text_field/flutter_otp_text_field.dart';
 import 'package:get/get.dart';
-import 'package:wasly_store/screens/auth/signup_screen.dart';
+import 'package:wasly/screens/auth/signup_screen.dart';
 import 'package:wasly_template/core/widgets/field/custom_password_field.dart';
 import 'package:wasly_template/core/widgets/field/custom_text_field.dart';
 import 'package:wasly_template/wasly_template.dart';

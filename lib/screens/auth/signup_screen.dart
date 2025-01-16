@@ -1,8 +1,8 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:wasly_store/screens/auth/login_screen.dart';
-import 'package:wasly_store/screens/auth/starting_location_screen.dart';
-import 'package:wasly_store/screens/auth/verification_screen.dart';
+import 'package:wasly/screens/auth/login_screen.dart';
+import 'package:wasly/screens/auth/starting_location_screen.dart';
+import 'package:wasly/screens/auth/verification_screen.dart';
 import 'package:wasly_template/core/widgets/field/custom_password_field.dart';
 import 'package:wasly_template/core/widgets/field/custom_text_field.dart';
 import 'package:wasly_template/wasly_template.dart';
@@ -123,8 +123,7 @@ class _SignUpFormState extends State<SignUpForm> {
             },
           ),
           // const SizedBox(height: 8),
-          CustomPhoneField(
-              formKey: _formKey, phoneNumberController: _phoneNumberController),
+          CustomPhoneField(phoneNumberController: _phoneNumberController),
           // const SizedBox(height: 8),
           CustomPasswordField(
             controller: _passwordController,
